@@ -15,6 +15,7 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+		getServer().getPluginManager().registerEvents(new EventListener(), this);
 		hunters.clear();
 	}
 	
