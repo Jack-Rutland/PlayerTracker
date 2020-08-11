@@ -1,0 +1,20 @@
+main: com.jackked.playertracker.Main
+name: PlayerTracker
+version: 1.0
+author: Jackked
+description: A compass that tracks players, similar to Dream's.
+commands:
+  givecompass:
+   description: Gives a compass to a player
+   usage: /givecompass <Player>
+   permission: playertracker.givecompass
+   permission-message: You dont have playertracker.givecompass permission.
+permissions:
+  playertracker.givecompass:
+   description: Allows givecompass command
+   default: op
+  playertracker.*:
+   description: Wildcard permission
+   default: op
+   children:
+     playertracker.givecompass: true
