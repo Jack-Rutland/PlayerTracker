@@ -6,15 +6,24 @@ description: A compass that tracks players, similar to Dream's.
 commands:
   givecompass:
    description: Gives a compass to a player
-   usage: /givecompass <Player>
+   usage: /givecompass <player>
    permission: playertracker.givecompass
    permission-message: You dont have playertracker.givecompass permission.
+  hunter:
+   description: Add or remove a player from the hunters team
+   usage: /hunter <add|remove> <player>
+   permission: playertracker.hunter
+   permission-message: You don't have the playertracker.hunter permission.
 permissions:
   playertracker.givecompass:
    description: Allows givecompass command
+   default: op
+  playertracker.hunter:
+   description: Allows hunter command
    default: op
   playertracker.*:
    description: Wildcard permission
    default: op
    children:
      playertracker.givecompass: true
+     playertracker.hunter: true
